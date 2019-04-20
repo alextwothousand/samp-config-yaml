@@ -183,12 +183,6 @@ def program():
             f.write('db_log_queries 0\n')
 
         try:
-            f.write("db_log_queries {}\n".format(config['db_log_queries']))
-        except KeyError:
-            print('db_log_queries does not exist! Using default...')
-            f.write('db_log_queries 0\n')
-
-        try:
             f.write("timestamp {}\n".format(config['timestamp']))
         except KeyError:
             print('timestamp does not exist! Using default...')
